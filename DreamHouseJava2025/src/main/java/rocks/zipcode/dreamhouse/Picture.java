@@ -1,5 +1,17 @@
 package rocks.zipcode.dreamhouse;
 
+/**
+ * This class represents a simple picture. You can draw the picture using
+ * the draw method. But wait, there's more: being an electronic picture, it
+ * can be changed. You can set it to black-and-white display and back to
+ * colors (only after it's been drawn, of course).
+ *
+ * This class was written as an early example for teaching Java with BlueJ.
+ * 
+ * @author  Michael Kölling and David J. Barnes
+ * @version 1.1  (24 May 2001)
+ */
+
 public class Picture {
     private Square wall;
     private Square window1, window2;
@@ -12,9 +24,11 @@ public class Picture {
     private Circle cloud1a, cloud1b, cloud1c;
     private Circle cloud2a, cloud2b, cloud2c;
     
-   
+    /**
+     * Constructor for objects of class Picture
+     */
 
-    public Picture() {
+    public Picture() { // nothing to do... instance variables are automatically set to null
     }
 
     public void draw() {
@@ -98,7 +112,6 @@ public class Picture {
         cloud1c.moveVertical(40);
         cloud1c.changeSize(40);
         cloud1c.makeVisible();
-
         
         cloud2a = new Circle();
         cloud2a.changeColor("white");
