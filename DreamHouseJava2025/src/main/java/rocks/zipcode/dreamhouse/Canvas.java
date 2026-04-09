@@ -29,7 +29,7 @@ public class Canvas
     public static Canvas getCanvas()
     {
         if(canvasSingleton == null) {
-            canvasSingleton = new Canvas("BlueJ Shapes Demo", 300, 300, 
+            canvasSingleton = new Canvas("BlueJ Shapes Demo", 800, 600, 
                     Color.white);
         }
         canvasSingleton.setVisible(true);
@@ -140,6 +140,48 @@ public class Canvas
         else
             graphic.setColor(Color.black);
     }
+
+    /**
+ * Changes the background color of the canvas.
+ * @param newColor The new color (e.g., "blue", "yellow", "white")
+ */
+public void setBackgroundColor(String colorString) {
+    if(colorString.equalsIgnoreCase("red")) {
+        backgroundColour = Color.red;
+    }
+    else if(colorString.equalsIgnoreCase("black")) {
+        backgroundColour = Color.black;
+    }
+    else if(colorString.equalsIgnoreCase("sky-blue") || colorString.equalsIgnoreCase("skyblue")) {
+        backgroundColour = new Color(135, 206, 235); // 🌤️ sky blue
+    }
+    else if(colorString.equalsIgnoreCase("blue")) {
+        backgroundColour = Color.blue;
+    }
+    else if(colorString.equalsIgnoreCase("yellow")) {
+        backgroundColour = Color.yellow;
+    }
+    else if(colorString.equalsIgnoreCase("green")) {
+        backgroundColour = Color.green;
+    }
+    else if(colorString.equalsIgnoreCase("magenta")) {
+        backgroundColour = Color.magenta;
+    }
+    else if(colorString.equalsIgnoreCase("white")) {
+        backgroundColour = Color.white;
+    }
+    else if(colorString.equalsIgnoreCase("lightgray")) {
+        backgroundColour = Color.lightGray;
+    }
+
+    if(graphic != null) {
+        Dimension size = canvas.getSize();
+        graphic.setColor(backgroundColour);
+        graphic.fillRect(0, 0, size.width, size.height);
+        redraw();
+    }
+}
+
 
     /**
      * Wait for a specified number of milliseconds before finishing.

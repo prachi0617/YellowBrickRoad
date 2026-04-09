@@ -1,6 +1,6 @@
 package rocks.zipcode.dreamhouse;
 
-import java.awt.*;
+import java.awt.Rectangle;
 
 /**
  * A square that can be manipulated and that draws itself on a canvas.
@@ -24,7 +24,7 @@ public class Square
     {
         size = 30;
         xPosition = 60;
-        yPosition = 50;
+        yPosition = 40;
         color = "red";
         isVisible = false;
     }

@@ -1,6 +1,5 @@
 package rocks.zipcode.dreamhouse;
-import java.awt.*;
-import java.awt.geom.*;
+import java.awt.geom.Ellipse2D;
 
 /**
  * A circle that can be manipulated and that draws itself on a canvas.
