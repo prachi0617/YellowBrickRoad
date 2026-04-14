@@ -7,4 +7,5 @@ public class DreamHouse {
         picture1.draw();
     }
 
+
 }
